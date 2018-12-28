@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 
 # Get data
-train = pd.read_csv('reg_train.csv')
+train = pd.read_csv('dataset/reg_train.csv')
 
 # Drop un-useful columns
 train =train.drop(['dteday','casual','registered'], axis=1)
@@ -43,7 +43,7 @@ Beta = np.dot(xTx_Inv_xT,y)
 # Starting the testing phase
 
 # Get test data
-test =pd.read_csv('reg_test.csv')
+test =pd.read_csv('daatset/reg_test.csv')
 inst = test.loc[:,'instant']
 
 # Drop the un-useful data
